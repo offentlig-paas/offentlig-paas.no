@@ -27,8 +27,7 @@ UID:20190915T202219Z-1915050887@offentlig-paas.no
 DTSTART;TZID=Europe/Berlin:20200211T083000
 DTEND;TZID=Europe/Berlin:20200211T160000
 SUMMARY:Offentlig PaaS Fagdag (placeholder)
-URL:https%3A%2F%2Foffentlig-paas.no
-DESCRIPTION:Offentlig PaaS Fagdag
+DESCRIPTION:Offentlig PaaS Fagdag (offentlig-paas.no)
 LOCATION:Oslo
 TRANSP:OPAQUE
 X-MICROSOFT-CDO-BUSYSTATUS:BUSY

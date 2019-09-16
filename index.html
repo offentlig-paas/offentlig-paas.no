@@ -10,6 +10,17 @@
   <title>Offentlig PaaS Norge</title>
   <link rel="stylesheet" type="text/css" href="static/semantic.min.css">
   <style type="text/css">
+    #scrollDown {
+      color: white;
+    }
+
+    .container.bottom {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
     .hidden.menu {
       display: none;
     }
@@ -46,7 +57,6 @@
     }
     .ui.vertical.stripe .button + h3,
     .ui.vertical.stripe p + h3 {
-      margin-top: 3em;
     }
     .ui.vertical.stripe .floated.image {
       clear: both;
@@ -99,7 +109,7 @@
     }
   </style>
 
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="static/semantic.min.js"></script>
   <script>
   $(document)
@@ -121,6 +131,13 @@
       // create sidebar and attach to menu open
       $('.ui.sidebar')
         .sidebar('attach events', '.toc.item')
+      ;
+
+      // scroll down
+      $('#scrollDown').click(function(event) {
+          event.preventDefault();
+          $('html, body').animate({scrollTop: $(window).height()}, 500);
+        })
       ;
 
     })
@@ -179,45 +196,67 @@
     </div>
 
     <div class="ui text container">
-      <h1 class="ui inverted header">
-        Offentlig PaaS Norge
-      </h1>
+      <h1 class="ui inverted header">Offentlig PaaS Norge</h1>
       <h2>Neste fagdag 11. februar 2020</h2>
+
       <a class="ui huge primary button" href="events/offentlig-paas-2020-02-11.ics" download>
         <i class="calendar icon"></i> Legg til i kalender
       </a>
     </div>
 
+    <div class="ui text container bottom">
+      <a href="#" id="scrollDown"><i class="angle double down big icon"></i></a>
+    </div>
+
   </div>
 
-  <!--<div class="ui vertical stripe segment">
+  <div class="ui vertical stripe segment">
     <div class="ui middle aligned stackable grid container">
       <div class="row">
         <div class="eight wide column">
-          <h3 class="ui header">We Help Companies and Companions</h3>
-          <p>We can give your company superpowers to do things that they never thought possible. Let us delight your customers and empower your needs...through pure data analytics.</p>
-          <h3 class="ui header">We Make Bananas That Can Dance</h3>
-          <p>Yes that's right, you thought it was the stuff of dreams, but even bananas can be bioengineered.</p>
+          <h3 class="ui header">Applikasjonsplattform</h3>
+
+          <p>Plattform som en Tjeneste (PaaS) tillater brukerene å utvikle,
+          kjøre, og administrere sine applikasjoner uten dyptgående kjenneskap
+          for å bygge eller forvalte infrastrukturen som skal til for å utvikle
+          og kjøre applikasjonen.</p>
+
+          <p>Primært bygger disse applikasjonsplattformene på toppen av standard
+          <a href="https://kubernetes.io">Kubernetes</a> eller ulike
+          distribusjoner av denne som <a href="https://openshift.com/">OpenShift</a>
+          on-premis eller i skyen.</p>
+
+          <h3 class="ui header">For Norske Brukere</h3>
+
+          <p>Offentlig PaaS Norge et fagnettverk for offentlige etater og
+          halv-offentlige selskaper som lager nye og moderne IT-plattformer
+          basert på prinsippene rundt Plattform som en Tjeneste.</p>
+
+          <p>Fagnettverket ble startet som et initiativ mellom NAV og
+          Skatteetaten i 2017 og har senere vokst til mer enn 500 medlemmer på
+          tvers av 50 offentlige etater og selskaper i Norge.</p>
+
         </div>
         <div class="six wide right floated column">
-          <img src="assets/images/wireframe/white-image.png" class="ui large bordered rounded image">
+          <img src="https://picsum.photos/id/1015/400/500" class="ui large bordered rounded image">
         </div>
       </div>
-      <div class="row">
+
+      <!--<div class="row">
         <div class="center aligned column">
           <a class="ui huge button">Check Them Out</a>
         </div>
-      </div>
+      </div>-->
     </div>
   </div>
 
 
-  <div class="ui vertical stripe quote segment">
+  <!--<div class="ui vertical stripe quote segment">
     <div class="ui equal width stackable internally celled grid">
       <div class="center aligned row">
         <div class="column">
           <h3>"What a Company"</h3>
-          <p>That is what they all say about us</p>
+          <p>NAIS is an application platform built to increase development speed by providing our developers at NAV with the best possible tools to develop and run their applications. </p>
         </div>
         <div class="column">
           <h3>"I shouldn't have gone with their competitor."</h3>
